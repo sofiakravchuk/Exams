@@ -1,10 +1,8 @@
 // Find key by value
 
-find = (object, ...rest) => {
+const findKey = (object, ...values) => {
   return Object.keys(object).find((key) =>
-    object[key] === rest[0]);
-  
-  return undefined;
+    object[key] === values[0]);
 };
 
-require('../Tests/find.js')(find);
+require('../Tests/find.js')(findKey);
